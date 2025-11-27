@@ -1,0 +1,429 @@
+/* ============ Base Styles ============ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #f5f5f5;
+    color: #111;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ============ Header & Navigation ============ */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.logo span {
+    font-weight: 400;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.nav-links a {
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    border-color: #111;
+}
+
+/* ============ Hero Section (Home & Player) ============ */
+.hero {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: 2rem;
+    align-items: center;
+    padding: 3rem 0 2rem;
+}
+
+.hero-text h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    margin-bottom: 1.5rem;
+    max-width: 32rem;
+}
+
+.tagline {
+    font-size: 0.95rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 0.7rem 1.6rem;
+    border: 1px solid #111;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    background-color: #111;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    color: #111;
+}
+
+/* ============ Sections ============ */
+.section {
+    padding: 2rem 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.2rem;
+}
+
+.section h2 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.18em;
+}
+
+.section-subtitle {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ============ Cards & Grids ============ */
+.cards-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.cards-3 {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* News cards on home */
+.card {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 1rem;
+    border: 1px solid #e4e4e4;
+}
+
+.card img {
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+}
+
+.card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.card span {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* ============ Players Page ============ */
+.page-header {
+    padding: 2.5rem 0 1rem;
+}
+
+.page-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+}
+
+.players-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    padding-bottom: 1.5rem;
+}
+
+.player-card {
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #e4e4e4;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.player-card img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.player-card-body {
+    padding: 1rem;
+}
+
+.player-card-body h3 {
+    margin-bottom: 0.35rem;
+}
+
+.player-position {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+}
+
+.player-card-body a {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid #111;
+}
+
+/* Search bar (bottom like your sketch) */
+.search-bar {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #e4e4e4;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* ============ Matches Page ============ */
+.matches-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.matches-tab {
+    flex: 1;
+    text-align: center;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #111;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+}
+
+.matches-tab.active {
+    background-color: #111;
+    color: #fff;
+}
+
+.match-card {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 1rem;
+    border: 1px solid #e4e4e4;
+    margin-bottom: 0.75rem;
+}
+
+.match-card span {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* ============ About Page ============ */
+.two-column {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+}
+
+.highlight-box {
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #e4e4e4;
+    padding: 1rem;
+}
+
+.highlight-box h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* ============ Contact Page ============ */
+.contact-layout {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+}
+
+form {
+    background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 6px;
+    border: 1px solid #e4e4e4;
+}
+
+.form-group {
+    margin-bottom: 0.9rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    border: none;
+    cursor: pointer;
+}
+
+/* Contact info box */
+.contact-info {
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #e4e4e4;
+    padding: 1.2rem;
+}
+
+.contact-info h3 {
+    margin-bottom: 0.6rem;
+}
+
+/* ============ Player Profile Page ============ */
+.player-hero {
+    padding: 3rem 0 2rem;
+}
+
+.player-hero-layout {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+}
+
+.player-info-list {
+    list-style: none;
+    font-size: 0.95rem;
+}
+
+.player-info-list li + li {
+    margin-top: 0.4rem;
+}
+
+/* ============ Footer ============ */
+footer {
+    border-top: 1px solid #e4e4e4;
+    padding: 1rem 0 1.5rem;
+    margin-top: 2rem;
+    background-color: #fff;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.footer-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 768px) {
+    .hero,
+    .two-column,
+    .contact-layout,
+    .player-hero-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding-top: 2rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+}
